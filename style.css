@@ -1,0 +1,44 @@
+#info
+{
+    
+}
+/*Окно с шифром*/
+#Delete
+{
+	position: relative;
+	left: 100px;
+	top: 36px;
+}
+#input
+{
+	position: relative;
+	left: 15px;
+	bottom: 35px;
+}
+#text1
+{
+	position: relative;
+	bottom: 35px;
+}
+#output
+{
+	position: relative;
+	left: 15px;
+	bottom: 10px;
+}
+#text2
+{
+	position: relative;
+	bottom: 10px;
+}
+#prov
+{
+	position: relative;
+	left: 15px;
+	bottom: -15px;
+}
+#text3
+{
+	position: relative;
+	bottom: -15px;
+}
