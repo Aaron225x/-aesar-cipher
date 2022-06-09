@@ -1,15 +1,15 @@
-Stroka1 = document.getElementById('input');
-Stroka2 = document.getElementById('output');
-Stroka3 = document.getElementById('prov');
-Stroka1.addEventListener('input', Шифер); 
+Stroka1 = document.getElementById('input'); //Ввод открытого текста
+Stroka2 = document.getElementById('output'); //Шифрограмма
+Stroka3 = document.getElementById('prov'); //Проверочная рашифровка
+Stroka1.addEventListener('input', Шифер);
 function Шифер() 
 {
-	Stroka2.value = caesar(Stroka1.value);
-	Stroka3.value = caesar(Stroka2.value, 'Расшифровка');
+	Stroka2.value = caesar(Stroka1.value); //Строка "Шифограмма" присваивает зашифрованый текс из строки "Ввод открытого текста"
+	Stroka3.value = caesar(Stroka2.value, 'Расшифровка'); //Строка "Проверочная рашифровка" присваивает расшифрованный текст из строки "Шифограмма"
 }
-function caesar(text, regim="shifr", key=3) {
+function caesar(text, regim="Шифровка", key=3) { //Текст, шифрование, ключ шифрование. 
 	function calc_pos(pos, module, key, regim) {
-		if (regim == "shifr")
+		if (regim == "Шифровка") //Если режим стоит "Шифровка"
 			current_pos = (pos+key)%module;
 		else {
 			current_pos = (pos-key)%module;
@@ -17,10 +17,10 @@ function caesar(text, regim="shifr", key=3) {
 				current_pos += module;
 			}
 		}
-		return current_pos;
+		return current_pos; //Возвращает текущую позицию, и заканчивает функцию.
 	}
 	
-	alf="абвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ !?.,";
+	alf="абвгдежзийклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ !?.,"; //Символы которые можно использовать в шифрование.
 	if (key<=0)
 		return text;
 	module =alf.length
